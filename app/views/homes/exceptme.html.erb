@@ -1,0 +1,13 @@
+All USERS EXCEPT ME
+
+<% @notusers.each do |user| %>
+	<br><%=user.email%><br>
+	<%= link_to 'follow', home_follow_path(followed_id: user.id) %><br>
+	<% @followers.each do |check|%>
+	 <%if check == user %>
+	  이미 팔로우 함 
+	  <%else%>
+	  <%end%>
+	  <%end%>
+	
+<%end%>
